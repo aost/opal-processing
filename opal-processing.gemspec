@@ -1,12 +1,14 @@
 # -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib/', __FILE__)
-$:.unshift lib unless $:.include?(lib)
 
-require 'opal-processing/version'
+# Include /lib in load path.
+lib = File.expand_path('../lib/', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'opal/processing/version'
 
 Gem::Specification.new do |s|
   s.name = "opal-processing"
-  s.version = Processing::VERSION
+  s.version = Opal::Processing::VERSION
   s.summary = "ruby-processing for the web, powered by Processing.js and Opal"
   s.author = "Artur Ostręga"
   s.email = "artur.mariusz.ostrega@gmail.com"
